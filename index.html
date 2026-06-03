@@ -25,10 +25,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   background-image:linear-gradient(rgba(91,47,190,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(91,47,190,0.025) 1px,transparent 1px);
   background-size:60px 60px;}
-::-webkit-scrollbar{width:3px}
-::-webkit-scrollbar-thumb{background:rgba(91,47,190,0.2);border-radius:4px}
-
-/* LOGIN */
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:rgba(91,47,190,0.2);border-radius:4px}
 #loginPage{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;
   background:linear-gradient(160deg,#1a0840,#0d0428);overflow:hidden;}
 #loginPage::before{content:'';position:absolute;inset:0;
@@ -42,10 +39,10 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 .c-tl{top:10px;left:10px;border-width:2px 0 0 2px}.c-tr{top:10px;right:10px;border-width:2px 2px 0 0}
 .c-bl{bottom:10px;left:10px;border-width:0 0 2px 2px}.c-br{bottom:10px;right:10px;border-width:0 2px 2px 0}
 .lc-logo{display:flex;align-items:center;gap:14px;margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid rgba(91,47,190,0.2);}
-.logo-img{border-radius:12px;overflow:hidden;border:2px solid var(--gold3);flex-shrink:0;box-shadow:0 4px 16px rgba(91,47,190,0.4);}
+.logo-img{border-radius:12px;overflow:hidden;border:2px solid var(--gold3);flex-shrink:0;}
 .logo-img img{display:block;object-fit:cover;}
 .logo-img.lg{width:52px;height:52px;}.logo-img.lg img{width:52px;height:52px;}
-.logo-img.md{width:40px;height:40px;}.logo-img.md img{width:40px;height:40px;}
+.logo-img.md{width:40px;height:40px;border-color:rgba(200,151,58,0.5);}.logo-img.md img{width:40px;height:40px;}
 .lc-brand{font-family:'Cinzel Decorative',serif;font-size:17px;font-weight:700;
   background:linear-gradient(135deg,#fff,var(--gold4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .lc-sub{font-size:10px;color:var(--text-dim);letter-spacing:3px;font-family:'Cinzel',serif;text-transform:uppercase;margin-top:3px}
@@ -57,14 +54,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14px;color:#fff;outline:none;transition:all .2s;}
 .li:focus{border-color:rgba(91,47,190,0.7);background:rgba(91,47,190,0.08);box-shadow:0 0 0 3px rgba(91,47,190,0.1)}
 .li::placeholder{color:rgba(155,130,200,0.5)}
-.pw-wrap{position:relative}
-.pw-wrap .li{padding-right:48px}
+.pw-wrap{position:relative}.pw-wrap .li{padding-right:48px}
 .pw-eye{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:15px;color:rgba(155,130,200,0.6);padding:4px;}
 .pw-eye:hover{color:var(--gold3)}
 .lb{width:100%;padding:14px;border-radius:10px;border:none;
   background:linear-gradient(135deg,var(--pu-mid),var(--pu-soft));color:#fff;
   font-family:'Cinzel',serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
-  cursor:pointer;transition:all .2s;margin-top:6px;box-shadow:0 4px 20px rgba(91,47,190,0.4);position:relative;overflow:hidden;}
+  cursor:pointer;transition:all .2s;margin-top:6px;box-shadow:0 4px 20px rgba(91,47,190,0.4);}
 .lb:hover{box-shadow:0 6px 28px rgba(91,47,190,0.5);transform:translateY(-1px)}
 .lb:active{transform:translateY(0)}.lb:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .lb-spin{width:16px;height:16px;border:2px solid rgba(255,255,255,.2);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none;margin:0 auto}
@@ -72,12 +68,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 @keyframes spin{to{transform:rotate(360deg)}}
 .lerr{margin-top:14px;padding:12px 16px;background:rgba(153,27,27,0.15);border:1px solid rgba(153,27,27,0.3);
   border-left:3px solid #DC2626;border-radius:8px;font-size:12px;color:#FCA5A5;display:none;}
-
-/* APP */
 #appPage{display:none;min-height:100vh;position:relative;z-index:1}
 #appPage.vis{display:flex}
-
-/* SIDEBAR */
 .sidebar{width:var(--sb-w);min-height:100vh;flex-shrink:0;
   background:linear-gradient(180deg,#1C0A4A 0%,#160837 100%);
   border-right:1px solid rgba(91,47,190,0.25);display:flex;flex-direction:column;
@@ -95,7 +87,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   font-size:9px;font-weight:700;letter-spacing:1.5px;font-family:'Cinzel',serif;text-transform:uppercase;
   background:linear-gradient(135deg,rgba(91,47,190,0.4),rgba(192,22,138,0.3));
   border:1px solid rgba(160,126,232,0.5);color:#C8B4FF;}
-.role-tag::before{content:'\u25C6';font-size:7px;color:var(--gold3);}
+.role-tag::before{content:'◆';font-size:7px;color:var(--gold3);}
 .sb-section{padding:18px 18px 6px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:rgba(91,47,190,0.5);font-family:'Cinzel',serif;}
 .sb-item{display:flex;align-items:center;gap:12px;padding:11px 14px;margin:2px 8px;border-radius:10px;
   color:rgba(160,126,232,0.6);font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;border:none;background:none;
@@ -112,12 +104,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   text-transform:uppercase;cursor:pointer;transition:all .2s;}
 .logout-btn:hover{border-color:rgba(192,22,138,0.5);color:var(--pk2);background:rgba(192,22,138,0.08)}
 .sb-ver{font-size:9px;color:rgba(91,47,190,0.35);text-align:center;margin-top:10px;letter-spacing:1px;font-family:'Cinzel',serif}
-
-/* MAIN — no topbar */
 .main{flex:1;display:flex;flex-direction:column;min-height:100vh;overflow:hidden}
 .page{flex:1;padding:24px 28px;overflow-y:auto}
-
-/* STATS BAR */
 .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
 .stat-card{background:#fff;border:1px solid var(--card-border);border-radius:16px;padding:18px 20px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;}
 .stat-card:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(91,47,190,0.1)}
@@ -125,19 +113,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 .stat-card.gold::before{background:linear-gradient(90deg,var(--gold2),var(--gold4))}
 .stat-card.purple::before{background:linear-gradient(90deg,var(--pu-mid),var(--pu-soft))}
 .stat-card.pink::before{background:linear-gradient(90deg,var(--pk),var(--pk2))}
-.stat-card.teal::before{background:linear-gradient(90deg,var(--teal),#16A34A)}
 .stat-card.dim::before{background:linear-gradient(90deg,var(--pu-light),var(--text-dim))}
 .stat-lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text-dim);margin-bottom:10px;font-family:'Cinzel',serif;}
 .stat-val{font-size:24px;font-weight:700;color:var(--text-dark);font-family:'Cinzel',serif;letter-spacing:-.5px;}
 .stat-val.sm{font-size:14px;font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:0;}
 .stat-sub{font-size:11px;color:var(--text-dim);margin-top:4px}
-
-/* MY DASHBOARD banner */
-.dash-header{
-  display:flex;align-items:center;gap:14px;padding:16px 22px;margin-bottom:20px;
-  background:#fff;border:1px solid var(--card-border);border-radius:16px;
-  box-shadow:0 2px 16px rgba(91,47,190,0.05);
-}
+.dash-header{display:flex;align-items:center;gap:14px;padding:16px 22px;margin-bottom:20px;
+  background:#fff;border:1px solid var(--card-border);border-radius:16px;box-shadow:0 2px 16px rgba(91,47,190,0.05);}
 .dash-av{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,rgba(91,47,190,0.2),rgba(192,22,138,0.2));
   border:2px solid var(--gold3);color:var(--gold3);font-size:14px;font-weight:700;font-family:'Cinzel',serif;
   display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -148,11 +130,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 .dash-dot{width:7px;height:7px;border-radius:50%;background:var(--pu-soft);animation:livePulse 1.2s ease-in-out infinite;}
 @keyframes livePulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.6}}
 .dash-live span{font-family:'Cinzel',serif;font-size:9px;font-weight:700;letter-spacing:2px;color:var(--pu-soft);text-transform:uppercase}
-
-/* MY STATS SECTION */
 .my-stats{background:#fff;border:1px solid var(--card-border);border-radius:16px;overflow:hidden;margin-bottom:20px;box-shadow:0 2px 16px rgba(91,47,190,0.05);}
 .my-stats-head{padding:16px 22px;border-bottom:1px solid rgba(91,47,190,0.08);background:linear-gradient(135deg,rgba(91,47,190,0.04),rgba(192,22,138,0.02));display:flex;align-items:center;gap:10px;}
-.my-stats-head-ico{font-size:18px;}
 .my-stats-head-title{font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--pu-deep);letter-spacing:.5px;}
 .my-stats-tabs{display:flex;border-bottom:1px solid rgba(91,47,190,0.1);padding:0 22px;}
 .mst{padding:12px 16px;border:none;background:transparent;color:var(--text-dim);font-family:'Cinzel',serif;font-size:11px;font-weight:600;
@@ -160,25 +139,18 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 .mst:hover{color:var(--pu-mid)}.mst.active{color:var(--pu-deep);border-bottom-color:var(--gold3);font-weight:700}
 .mst-body{padding:20px 22px;display:none}.mst-body.open{display:block;animation:fadeIn .25s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-
-/* AGENCY TABLE in my stats */
 .ag-table{width:100%;border-collapse:collapse;margin-top:4px}
 .ag-table th{text-align:left;font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:rgba(184,134,11,0.7);
   padding:9px 14px;background:rgba(200,151,58,0.05);border-bottom:1.5px solid rgba(200,151,58,0.2);font-family:'Cinzel',serif;}
 .ag-table td{padding:11px 14px;border-bottom:1px solid rgba(91,47,190,0.06);font-size:12.5px;color:#3D2060;vertical-align:middle;}
-.ag-table tr:last-child td{border-bottom:none}
-.ag-table tr:hover td{background:rgba(91,47,190,0.02)}
+.ag-table tr:last-child td{border-bottom:none}.ag-table tr:hover td{background:rgba(91,47,190,0.02)}
 .ag-ico{width:34px;height:34px;border-radius:9px;background:rgba(200,151,58,0.1);color:var(--gold2);border:1px solid rgba(200,151,58,0.25);
   font-family:'Cinzel',serif;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;}
-
-/* PANEL */
 .panel-card{background:#fff;border:1px solid var(--card-border);border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(91,47,190,0.05);}
 .panel-head{padding:18px 24px;border-bottom:1px solid rgba(91,47,190,0.08);display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,rgba(91,47,190,0.03),rgba(192,22,138,0.02));}
 .ph-ico{font-size:18px}.ph-title{font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--pu-deep);letter-spacing:.5px;}
 .ph-sub{font-size:12px;color:var(--text-dim);margin-left:auto}
 .panel-body{padding:22px 24px}
-
-/* SEARCH */
 .search-row{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap}
 .sg{flex:1;min-width:160px}
 .sg label{display:block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text-dim);margin-bottom:8px;font-family:'Cinzel',serif;}
@@ -233,32 +205,25 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 .pill.rose{background:rgba(192,22,138,0.08);color:var(--pk2);border:1px solid rgba(192,22,138,0.2)}
 .pill.teal{background:rgba(13,122,110,0.08);color:var(--teal);border:1px solid rgba(13,122,110,0.2)}
 .pill.gold{background:rgba(200,151,58,0.1);color:var(--gold2);border:1px solid rgba(200,151,58,0.25)}
+.pill.purple{background:rgba(91,47,190,0.08);color:var(--pu-soft);border:1px solid rgba(91,47,190,0.2)}
 .nodata{text-align:center;padding:44px 20px;color:var(--text-dim);font-size:13px;border:1.5px dashed rgba(91,47,190,0.15);border-radius:12px;margin-top:8px;}
 .nodata big{display:block;font-size:36px;margin-bottom:12px;opacity:.6}.nodata p{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.5px}
 .h-main{display:flex;align-items:center;gap:10px;margin-bottom:6px;padding:8px 12px;border-left:3px solid var(--pu-mid);background:linear-gradient(90deg,rgba(91,47,190,0.05),transparent);border-radius:0 6px 6px 0;}
-.h-main::before{content:'\u25C6';color:var(--gold3);font-size:10px;flex-shrink:0}
+.h-main::before{content:'◆';color:var(--gold3);font-size:10px;flex-shrink:0}
 .h-main span{font-family:'Cinzel',serif;font-size:11px;font-weight:700;color:var(--pu-deep);letter-spacing:.5px;text-transform:uppercase}
-
-/* PASSWORD MODAL */
 .modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(10,4,30,0.8);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;}
 .modal-overlay.open{display:flex;animation:fadeIn .2s ease}
 .modal-box{position:relative;background:linear-gradient(160deg,#1a0840,#120630);border:1px solid rgba(91,47,190,0.4);
-  border-top:2px solid var(--gold3);border-radius:20px;padding:36px 32px;width:100%;max-width:390px;
-  box-shadow:0 32px 80px rgba(0,0,0,0.7);}
-.modal-close{position:absolute;top:14px;right:14px;background:none;border:none;color:rgba(155,130,200,0.5);font-size:18px;cursor:pointer;padding:4px;transition:color .15s;}
+  border-top:2px solid var(--gold3);border-radius:20px;padding:36px 32px;width:100%;max-width:390px;box-shadow:0 32px 80px rgba(0,0,0,0.7);}
+.modal-close{position:absolute;top:14px;right:14px;background:none;border:none;color:rgba(155,130,200,0.5);font-size:18px;cursor:pointer;padding:4px;}
 .modal-close:hover{color:var(--pk2)}
 .modal-title{font-family:'Cinzel',serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:6px;}
 .modal-sub{font-size:12px;color:rgba(155,130,200,0.7);margin-bottom:24px}
 .modal-success{margin-top:14px;padding:12px 16px;background:rgba(22,101,52,0.15);border:1px solid rgba(22,101,52,0.3);
   border-left:3px solid #16A34A;border-radius:8px;font-size:12px;color:#86EFAC;display:none;}
-
-/* PARTICLE */
 .particle{position:fixed;border-radius:50%;pointer-events:none;z-index:0;animation:floatUp linear forwards;}
 @keyframes floatUp{0%{transform:translateY(0);opacity:0}10%{opacity:1}90%{opacity:.6}100%{transform:translateY(-100vh) translateX(var(--dx,20px));opacity:0}}
-
-/* INFO BOX */
 .info-box{padding:12px 16px;border-radius:10px;background:rgba(91,47,190,0.05);border:1px solid rgba(91,47,190,0.14);border-left:3px solid var(--pu-soft);margin-bottom:16px;font-size:12px;color:#3D2060;}
-
 @media(max-width:900px){.stats-bar{grid-template-columns:repeat(2,1fr)}.sgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:680px){
   :root{--sb-w:62px}
@@ -271,23 +236,21 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 </style>
 </head>
 <body>
-
 <!-- PASSWORD MODAL -->
 <div class="modal-overlay" id="pwModal">
   <div class="modal-box">
     <div class="corner c-tl"></div><div class="corner c-tr"></div><div class="corner c-bl"></div><div class="corner c-br"></div>
-    <button class="modal-close" onclick="closePwModal()">&#x2715;</button>
-    <div class="modal-title">&#x1F510; Change Password</div>
+    <button class="modal-close" onclick="closePwModal()">✕</button>
+    <div class="modal-title">🔐 Change Password</div>
     <div class="modal-sub">Enter current password then set a new one</div>
-    <div class="lf"><label class="lf-lbl">Current Password</label><div class="pw-wrap"><input class="li" id="pwOld" type="password" placeholder="Current password"/><button class="pw-eye" onclick="toggleField('pwOld',this)">&#x1F441;</button></div></div>
-    <div class="lf"><label class="lf-lbl">New Password</label><div class="pw-wrap"><input class="li" id="pwNew" type="password" placeholder="New password"/><button class="pw-eye" onclick="toggleField('pwNew',this)">&#x1F441;</button></div></div>
-    <div class="lf" style="margin-bottom:0"><label class="lf-lbl">Confirm New Password</label><div class="pw-wrap"><input class="li" id="pwConfirm" type="password" placeholder="Confirm new password" onkeydown="if(event.key==='Enter')doChangePw()"/><button class="pw-eye" onclick="toggleField('pwConfirm',this)">&#x1F441;</button></div></div>
+    <div class="lf"><label class="lf-lbl">Current Password</label><div class="pw-wrap"><input class="li" id="pwOld" type="password" placeholder="Current password"/><button class="pw-eye" onclick="toggleField('pwOld',this)">👁</button></div></div>
+    <div class="lf"><label class="lf-lbl">New Password</label><div class="pw-wrap"><input class="li" id="pwNew" type="password" placeholder="New password"/><button class="pw-eye" onclick="toggleField('pwNew',this)">👁</button></div></div>
+    <div class="lf" style="margin-bottom:0"><label class="lf-lbl">Confirm New Password</label><div class="pw-wrap"><input class="li" id="pwConfirm" type="password" placeholder="Confirm new password" onkeydown="if(event.key==='Enter')doChangePw()"/><button class="pw-eye" onclick="toggleField('pwConfirm',this)">👁</button></div></div>
     <button class="lb" id="pwChangeBtn" onclick="doChangePw()" style="margin-top:20px"><div class="lb-spin"></div><span class="lb-txt">Update Password</span></button>
     <div class="lerr" id="pwErr"></div>
-    <div class="modal-success" id="pwSuccess">&#x2705; Password updated successfully!</div>
+    <div class="modal-success" id="pwSuccess">✅ Password updated successfully!</div>
   </div>
 </div>
-
 <!-- LOGIN -->
 <div id="loginPage">
   <div class="lc">
@@ -299,12 +262,11 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
     <h2>Welcome Back</h2>
     <p>Sign in to access the performance tracker</p>
     <div class="lf"><label>User ID</label><input class="li" id="loginId" type="text" placeholder="Enter your ID" autocomplete="off" onkeydown="if(event.key==='Enter')document.getElementById('loginPw').focus()"/></div>
-    <div class="lf"><label>Password</label><div class="pw-wrap"><input class="li" id="loginPw" type="password" placeholder="Enter password" autocomplete="off" onkeydown="if(event.key==='Enter')doLogin()"/><button class="pw-eye" onclick="togglePw()" id="pwEye">&#x1F441;</button></div></div>
+    <div class="lf"><label>Password</label><div class="pw-wrap"><input class="li" id="loginPw" type="password" placeholder="Enter password" autocomplete="off" onkeydown="if(event.key==='Enter')doLogin()"/><button class="pw-eye" onclick="togglePw()" id="pwEye">👁</button></div></div>
     <button class="lb" id="loginBtn" onclick="doLogin()"><div class="lb-spin"></div><span class="lb-txt">Sign In</span></button>
     <div class="lerr" id="loginErr"></div>
   </div>
 </div>
-
 <!-- APP -->
 <div id="appPage">
   <aside class="sidebar">
@@ -315,87 +277,72 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
     <div class="sb-user">
       <div class="sb-av" id="sbAv">?</div>
       <div style="min-width:0;flex:1">
-        <div class="sb-uname" id="sbName">&#x2014;</div>
-        <div><span class="role-tag" id="sbRole">&#x2014;</span></div>
+        <div class="sb-uname" id="sbName">—</div>
+        <div><span class="role-tag" id="sbRole">—</span></div>
       </div>
     </div>
     <div class="sb-section">Main</div>
-    <button class="sb-item active" id="nav-overview" onclick="setNav('overview');openPanel('overview')"><span class="sb-item-ico">&#x1F3E0;</span><span>My Dashboard</span></button>
-    <button class="sb-item" id="nav-host" onclick="setNav('host');openPanel('host')"><span class="sb-item-ico">&#x1F399;&#xFE0F;</span><span>Host Lookup</span></button>
-    <button class="sb-item" id="nav-agency" onclick="setNav('agency');openPanel('agency')"><span class="sb-item-ico">&#x1F3E2;</span><span>Agency Lookup</span></button>
+    <button class="sb-item active" id="nav-overview" onclick="setNav('overview');openPanel('overview')"><span class="sb-item-ico">🏠</span><span>My Dashboard</span></button>
+    <button class="sb-item" id="nav-host" onclick="setNav('host');openPanel('host')"><span class="sb-item-ico">🎙️</span><span>Host Lookup</span></button>
+    <button class="sb-item" id="nav-agency" onclick="setNav('agency');openPanel('agency')"><span class="sb-item-ico">🏢</span><span>Agency Lookup</span></button>
     <div class="sb-section">Account</div>
-    <button class="sb-item" onclick="openPwModal()"><span class="sb-item-ico">&#x1F510;</span><span>Change Password</span></button>
+    <button class="sb-item" onclick="openPwModal()"><span class="sb-item-ico">🔐</span><span>Change Password</span></button>
     <div class="sb-section">Tools</div>
-    <button class="sb-item" style="opacity:.4;cursor:default"><span class="sb-item-ico">&#x1F4CA;</span><span>Analytics</span><span class="sb-badge">Soon</span></button>
-    <button class="sb-item" style="opacity:.4;cursor:default"><span class="sb-item-ico">&#x1F4E4;</span><span>Export Data</span><span class="sb-badge">Soon</span></button>
+    <button class="sb-item" style="opacity:.4;cursor:default"><span class="sb-item-ico">📊</span><span>Analytics</span><span class="sb-badge">Soon</span></button>
+    <button class="sb-item" style="opacity:.4;cursor:default"><span class="sb-item-ico">📤</span><span>Export Data</span><span class="sb-badge">Soon</span></button>
     <div class="sb-footer">
       <div class="sb-footer-line"></div>
-      <button class="logout-btn" onclick="doLogout()">&#x23CF; &nbsp;Sign Out</button>
-      <div class="sb-ver">v2.2.0 &middot; &copy; 2026 Rizz Live India</div>
+      <button class="logout-btn" onclick="doLogout()">⏏ &nbsp;Sign Out</button>
+      <div class="sb-ver">v2.2.0 · © 2026 Rizz Live India</div>
     </div>
   </aside>
-
   <div class="main">
     <div class="page">
-
-      <!-- OVERVIEW / MY DASHBOARD PANEL -->
       <div id="overviewPanel">
-        <!-- Greeting header -->
         <div class="dash-header">
           <div class="dash-av" id="dashAv">?</div>
-          <div>
-            <div class="dash-name" id="dashName">Welcome</div>
-            <div class="dash-sub" id="dashSub">Your personal performance overview</div>
-          </div>
+          <div><div class="dash-name" id="dashName">Welcome</div><div class="dash-sub" id="dashSub">Your personal performance overview</div></div>
           <div class="dash-live"><div class="dash-dot"></div><span>Live</span></div>
         </div>
-
-        <!-- My summary stat cards -->
-        <div class="stats-bar" id="myStatsBar">
-          <div class="stat-card gold"><div class="stat-lbl">My Hosts</div><div class="stat-val" id="my-hosts">&#x2014;</div><div class="stat-sub">In my agencies</div></div>
-          <div class="stat-card pink"><div class="stat-lbl">My Revenue</div><div class="stat-val" id="my-revenue">&#x2014;</div><div class="stat-sub">Monthly rubies</div></div>
-          <div class="stat-card purple"><div class="stat-lbl">My Agencies</div><div class="stat-val" id="my-agencies">&#x2014;</div><div class="stat-sub">Active this period</div></div>
-          <div class="stat-card dim"><div class="stat-lbl">Data Period</div><div class="stat-val sm" id="my-period">&#x2014;</div><div class="stat-sub">Current cycle</div></div>
+        <div class="stats-bar">
+          <div class="stat-card gold"><div class="stat-lbl">My Hosts</div><div class="stat-val" id="my-hosts">—</div><div class="stat-sub">In my agencies</div></div>
+          <div class="stat-card pink"><div class="stat-lbl">My Revenue</div><div class="stat-val" id="my-revenue">—</div><div class="stat-sub">Monthly rubies</div></div>
+          <div class="stat-card purple"><div class="stat-lbl">My Agencies</div><div class="stat-val" id="my-agencies">—</div><div class="stat-sub">Active this period</div></div>
+          <div class="stat-card dim"><div class="stat-lbl">Data Period</div><div class="stat-val sm" id="my-period">—</div><div class="stat-sub">Current cycle</div></div>
         </div>
-
-        <!-- My agencies + hosts breakdown -->
         <div class="my-stats">
-          <div class="my-stats-head"><span class="my-stats-head-ico">&#x1F4CA;</span><span class="my-stats-head-title">My Performance Breakdown</span></div>
+          <div class="my-stats-head"><span style="font-size:18px">📈</span><span class="my-stats-head-title">My Performance Breakdown</span></div>
           <div class="my-stats-tabs">
-            <button class="mst active" onclick="switchMyTab(this,'ms-mo')">&#x1F4C5; Monthly</button>
-            <button class="mst" onclick="switchMyTab(this,'ms-we')">&#x1F4CA; Weekly</button>
-            <button class="mst" onclick="switchMyTab(this,'ms-da')">&#x1F4C6; Daily</button>
+            <button class="mst active" onclick="switchMyTab(this,'ms-mo')">📅 Monthly</button>
+            <button class="mst" onclick="switchMyTab(this,'ms-we')">📊 Weekly</button>
+            <button class="mst" onclick="switchMyTab(this,'ms-da')">📆 Daily</button>
           </div>
           <div id="ms-mo" class="mst-body open"><div id="ms-mo-content"></div></div>
           <div id="ms-we" class="mst-body"><div id="ms-we-content"></div></div>
           <div id="ms-da" class="mst-body"><div id="ms-da-content"></div></div>
         </div>
       </div>
-
-      <!-- HOST PANEL -->
       <div id="hostPanel" style="display:none">
         <div class="panel-card">
-          <div class="panel-head"><span class="ph-ico">&#x1F399;&#xFE0F;</span><span class="ph-title">Host Lookup</span><span class="ph-sub">Search by username or host ID</span></div>
+          <div class="panel-head"><span class="ph-ico">🎙️</span><span class="ph-title">Host Lookup</span><span class="ph-sub">Search by username or host ID</span></div>
           <div class="panel-body">
             <div id="hostPeriodBanner" class="period-bar"></div>
             <div class="search-row">
               <div class="sg"><label>Host Username / ID</label><input class="si" id="hostInput" type="text" placeholder="e.g. 6453 or 800175036" autocomplete="off" onkeydown="if(event.key==='Enter')lookupHost()"/></div>
-              <button class="search-btn hbtn" onclick="lookupHost()">&#x1F50D; &nbsp;Search</button>
+              <button class="search-btn hbtn" onclick="lookupHost()">🔍 Search</button>
             </div>
             <div class="err-bar" id="hostErr">No host found with that ID or username.</div>
           </div>
           <div id="hostResults"></div>
         </div>
       </div>
-
-      <!-- AGENCY PANEL -->
       <div id="agencyPanel" style="display:none">
         <div class="panel-card">
-          <div class="panel-head"><span class="ph-ico">&#x1F3E2;</span><span class="ph-title">Agency Lookup</span><span class="ph-sub">Search by agency code</span></div>
+          <div class="panel-head"><span class="ph-ico">🏢</span><span class="ph-title">Agency Lookup</span><span class="ph-sub">Search by agency code</span></div>
           <div class="panel-body">
             <div class="search-row">
               <div class="sg"><label>Agency Code</label><input class="si" id="agencyInput" type="text" placeholder="e.g. 100661" autocomplete="off" onkeydown="if(event.key==='Enter')lookupAgency()"/></div>
-              <button class="search-btn abtn" onclick="lookupAgency()">&#x1F50D; &nbsp;Search</button>
+              <button class="search-btn abtn" onclick="lookupAgency()">🔍 Search</button>
             </div>
             <div class="err-bar" id="agencyErr">No agency found with that code.</div>
           </div>
@@ -403,11 +350,11 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
         </div>
         <div id="agencyHostSection" style="display:none;margin-top:20px">
           <div class="panel-card">
-            <div class="panel-head"><span class="ph-ico">&#x1F399;&#xFE0F;</span><span class="ph-title">Search Host in Agency</span></div>
+            <div class="panel-head"><span class="ph-ico">🎙️</span><span class="ph-title">Search Host in Agency</span></div>
             <div class="panel-body">
               <div class="search-row">
                 <div class="sg"><label>Host ID / Username</label><input class="si" id="agencyHostInput" type="text" placeholder="e.g. 2222" autocomplete="off" onkeydown="if(event.key==='Enter')lookupAgencyHost()"/></div>
-                <button class="search-btn hbtn" onclick="lookupAgencyHost()">&#x1F50D; &nbsp;Find Host</button>
+                <button class="search-btn hbtn" onclick="lookupAgencyHost()">🔍 Find Host</button>
               </div>
               <div class="err-bar" id="agencyHostErr">No host found with that ID.</div>
             </div>
@@ -415,17 +362,14 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
-
 <script>
 const USERS_SHEET_URL='https://script.google.com/macros/s/AKfycbzY8sAqKBJhkDPHl1cdmEp10AH2OM_B4P1tQP6fxPsaITNGTocCprfyBtgalHTZbw7vRw/exec';
 const D=window.DASHBOARD_DATA||{};
 let currentUser=null;
 
-/* PARTICLES */
 function spawnParticle(){
   const p=document.createElement('div');p.className='particle';
   const colors=['rgba(91,47,190,0.4)','rgba(160,126,232,0.35)','rgba(200,151,58,0.35)','rgba(192,22,138,0.3)'];
@@ -435,29 +379,53 @@ function spawnParticle(){
 }
 setInterval(spawnParticle,1400);
 
-function togglePw(){const i=document.getElementById('loginPw'),e=document.getElementById('pwEye');i.type=i.type==='password'?'text':'password';e.textContent=i.type==='password'?'\uD83D\uDC41':'\uD83D\uDE48';}
-function toggleField(id,btn){const el=document.getElementById(id);el.type=el.type==='password'?'text':'password';btn.textContent=el.type==='password'?'\uD83D\uDC41':'\uD83D\uDE48';}
+function togglePw(){
+  const i=document.getElementById('loginPw'),e=document.getElementById('pwEye');
+  i.type=i.type==='password'?'text':'password';
+  e.textContent=i.type==='password'?'👁':'🙈';
+}
+function toggleField(id,btn){
+  const el=document.getElementById(id);
+  el.type=el.type==='password'?'text':'password';
+  btn.textContent=el.type==='password'?'👁':'🙈';
+}
 
 async function doLogin(){
-  const uid=document.getElementById('loginId').value.trim(),pw=document.getElementById('loginPw').value.trim();
-  const err=document.getElementById('loginErr'),btn=document.getElementById('loginBtn');
+  const uid=document.getElementById('loginId').value.trim();
+  const pw=document.getElementById('loginPw').value.trim();
+  const err=document.getElementById('loginErr');
+  const btn=document.getElementById('loginBtn');
   err.style.display='none';
   if(!uid||!pw){err.textContent='Please enter both ID and Password.';err.style.display='block';return;}
   btn.classList.add('loading');btn.disabled=true;
   try{
     const users=await fetchUsers();
-    if(!Array.isArray(users)||!users.length){err.textContent='User list empty.';err.style.display='block';btn.classList.remove('loading');btn.disabled=false;return;}
+    if(!Array.isArray(users)||!users.length){
+      err.textContent='User list empty or could not load.';err.style.display='block';
+      btn.classList.remove('loading');btn.disabled=false;return;
+    }
     const match=users.find(u=>String(u.id).trim().toLowerCase()===uid.toLowerCase()&&String(u.password).trim()===pw);
-    if(!match){err.textContent='Wrong ID or Password.';err.style.display='block';document.getElementById('loginPw').value='';}
-    else{currentUser=match;showApp();}
-  }catch(e){err.textContent='Could not connect to server.';err.style.display='block';}
+    if(!match){
+      err.textContent='Wrong ID or Password. Please try again.';
+      err.style.display='block';
+      document.getElementById('loginPw').value='';
+    } else {
+      currentUser=match;showApp();
+    }
+  }catch(e){
+    err.textContent='Could not connect to server. Check internet.';err.style.display='block';
+  }
   btn.classList.remove('loading');btn.disabled=false;
 }
+
 async function fetchUsers(){
   const res=await fetch(USERS_SHEET_URL+'?action=getUsers&t='+Date.now(),{method:'GET',mode:'cors',cache:'no-cache'});
   if(!res.ok)throw new Error('HTTP '+res.status);
-  const data=await res.json();if(data&&data.error)throw new Error(data.error);return data;
+  const data=await res.json();
+  if(data&&data.error)throw new Error(data.error);
+  return data;
 }
+
 function showApp(){
   document.getElementById('loginPage').classList.add('hidden');
   document.getElementById('appPage').classList.add('vis');
@@ -465,11 +433,11 @@ function showApp(){
   document.getElementById('sbName').textContent=name;
   document.getElementById('sbRole').textContent=currentUser.role||'User';
   document.getElementById('sbAv').textContent=initials(name);
-  // Setup dashboard
   document.getElementById('dashAv').textContent=initials(name);
   document.getElementById('dashName').textContent='Welcome, '+name+'!';
   loadMyDashboard();
 }
+
 function doLogout(){
   currentUser=null;
   document.getElementById('appPage').classList.remove('vis');
@@ -479,7 +447,6 @@ function doLogout(){
   document.getElementById('loginErr').style.display='none';
 }
 
-/* PASSWORD CHANGE */
 function openPwModal(){
   ['pwOld','pwNew','pwConfirm'].forEach(id=>{document.getElementById(id).value='';document.getElementById(id).type='password';});
   document.getElementById('pwErr').style.display='none';
@@ -488,8 +455,11 @@ function openPwModal(){
 }
 function closePwModal(){document.getElementById('pwModal').classList.remove('open');}
 document.getElementById('pwModal').addEventListener('click',function(e){if(e.target===this)closePwModal();});
+
 async function doChangePw(){
-  const oldPw=document.getElementById('pwOld').value.trim(),newPw=document.getElementById('pwNew').value.trim(),confPw=document.getElementById('pwConfirm').value.trim();
+  const oldPw=document.getElementById('pwOld').value.trim();
+  const newPw=document.getElementById('pwNew').value.trim();
+  const confPw=document.getElementById('pwConfirm').value.trim();
   const err=document.getElementById('pwErr'),suc=document.getElementById('pwSuccess'),btn=document.getElementById('pwChangeBtn');
   err.style.display='none';suc.style.display='none';
   if(!oldPw||!newPw||!confPw){err.textContent='Please fill in all fields.';err.style.display='block';return;}
@@ -502,37 +472,29 @@ async function doChangePw(){
     const data=await res.json();
     if(data&&data.success){currentUser.password=newPw;suc.style.display='block';setTimeout(()=>closePwModal(),2000);}
     else{err.textContent=(data&&data.error)||'Failed to update.';err.style.display='block';}
-  }catch(e){currentUser.password=newPw;suc.style.display='block';setTimeout(()=>closePwModal(),2000);}
+  }catch(e){
+    currentUser.password=newPw;suc.style.display='block';setTimeout(()=>closePwModal(),2000);
+  }
   btn.classList.remove('loading');btn.disabled=false;
 }
 
-/* ========== MY DASHBOARD LOGIC ========== */
-// adminName from login — e.g. "Ray-IN"
-// Data filtering: host belongs to admin if host.agencyName matches any agency where agencyName contains adminName
-// OR if host.hostName contains adminName (flexible matching)
-// Primary: agency filter — agencies whose agencyName includes the adminName token
+function getAdminToken(){return (currentUser.name||currentUser.id).trim();}
 
-function getAdminToken(){
-  // e.g. "Ray-IN" -> "Ray-IN", also try just "Ray"
-  return (currentUser.name||currentUser.id).trim();
-}
-
-function getMyAgencies(periodAgencies, periodHosts){
-  const token = getAdminToken().toLowerCase();
-  // Match agencies where agencyName contains the admin name token
+function getMyAgencies(periodAgencies){
+  const token=getAdminToken().toLowerCase();
   return (periodAgencies||[]).filter(ag=>{
-    const agName = String(ag.agencyName||'').toLowerCase();
-    return agName.includes(token) || token.includes(agName.replace(/[^a-z0-9]/gi,'').toLowerCase().substring(0,4));
+    const agName=String(ag.agencyName||'').toLowerCase();
+    return agName.includes(token) || token.split(/[-_\s]+/).some(part=>part.length>=3&&agName.includes(part));
   });
 }
 
-function getMyHosts(periodHosts, myAgencies){
-  const agencyNames = myAgencies.map(a=>String(a.agencyName||'').toLowerCase());
-  const agencyCodes = myAgencies.map(a=>String(a.agencyCode||''));
+function getMyHosts(periodHosts,myAgencies){
+  const agencyNames=myAgencies.map(a=>String(a.agencyName||'').toLowerCase());
+  const agencyCodes=myAgencies.map(a=>String(a.agencyCode||''));
   return (periodHosts||[]).filter(h=>{
-    const hn = String(h.agencyName||'').toLowerCase();
-    const hc = String(h.agencyCode||'');
-    return agencyNames.includes(hn) || agencyCodes.includes(hc);
+    const hn=String(h.agencyName||'').toLowerCase();
+    const hc=String(h.agencyCode||'');
+    return agencyNames.some(n=>n&&n===hn)||agencyCodes.some(c=>c&&c===hc);
   });
 }
 
@@ -540,99 +502,71 @@ function loadMyDashboard(){
   const meta=D.meta||{};
   const mFrom=(meta.monthlyPeriod&&meta.monthlyPeriod.from)||'';
   const mTo=(meta.monthlyPeriod&&meta.monthlyPeriod.to)||'';
-
+  const wFrom=(meta.weeklyPeriod&&meta.weeklyPeriod.from)||'';
+  const wTo=(meta.weeklyPeriod&&meta.weeklyPeriod.to)||'';
+  const dDate=meta.dailyDate||'Today';
   const moAgencies=D.agencies&&D.agencies.monthly||[];
   const weAgencies=D.agencies&&D.agencies.weekly||[];
   const moHosts=D.monthly||[];
   const weHosts=D.weekly||[];
   const daHosts=D.daily||[];
-
-  const myMoAg = getMyAgencies(moAgencies, moHosts);
-  const myMoHosts = getMyHosts(moHosts, myMoAg);
-  const myWeAg = getMyAgencies(weAgencies, weHosts);
-  const myWeHosts = getMyHosts(weHosts, myWeAg);
-
-  // Use daily hosts that match any of my monthly agency names
-  const myDaHosts = getMyHosts(daHosts, myMoAg);
-
-  const totalRev = myMoHosts.reduce((s,h)=>s+Number(h.rubies||0),0);
-
-  // Update stat cards
-  document.getElementById('my-hosts').textContent = myMoHosts.length||'0';
-  document.getElementById('my-revenue').textContent = totalRev?fmtN(totalRev)+'\uD83D\uDC8E':'0';
-  document.getElementById('my-agencies').textContent = myMoAg.length||'0';
-  document.getElementById('my-period').textContent = mFrom&&mTo?mFrom+' \u2013 '+mTo:'\u2014';
-
-  const wFrom=(meta.weeklyPeriod&&meta.weeklyPeriod.from)||'';
-  const wTo=(meta.weeklyPeriod&&meta.weeklyPeriod.to)||'';
-  const dDate=meta.dailyDate||'Today';
-
-  if(myMoAg.length===0 && myMoHosts.length===0){
-    document.getElementById('dashSub').textContent='No data matched for your account name yet';
-    const noDataHTML='<div class="info-box">&#x2139;&#xFE0F; No data found matching your account name (<strong>'+getAdminToken()+'</strong>). Make sure your agency name in the data includes your admin name.</div>';
-    document.getElementById('ms-mo-content').innerHTML=noDataHTML;
-    document.getElementById('ms-we-content').innerHTML=noDataHTML;
-    document.getElementById('ms-da-content').innerHTML=noDataHTML;
+  const myMoAg=getMyAgencies(moAgencies);
+  const myMoHosts=getMyHosts(moHosts,myMoAg);
+  const myWeAg=getMyAgencies(weAgencies);
+  const myWeHosts=getMyHosts(weHosts,myWeAg);
+  const myDaHosts=getMyHosts(daHosts,myMoAg);
+  const totalRev=myMoHosts.reduce((s,h)=>s+Number(h.rubies||0),0);
+  document.getElementById('my-hosts').textContent=myMoHosts.length||'0';
+  document.getElementById('my-revenue').textContent=totalRev?fmtN(totalRev)+'💎':'0';
+  document.getElementById('my-agencies').textContent=myMoAg.length||'0';
+  document.getElementById('my-period').textContent=mFrom&&mTo?mFrom+' – '+mTo:'—';
+  if(myMoAg.length===0&&myMoHosts.length===0){
+    document.getElementById('dashSub').textContent='No data matched for: '+getAdminToken();
+    const msg='<div class="info-box">ℹ️ No data found matching your name (<strong>'+getAdminToken()+'</strong>). Make sure your agency name in data.js contains your admin name token.</div>';
+    ['ms-mo-content','ms-we-content','ms-da-content'].forEach(id=>document.getElementById(id).innerHTML=msg);
     return;
   }
-
-  document.getElementById('dashSub').textContent='Showing data for: '+myMoAg.map(a=>a.agencyName).join(', ');
-
-  // Monthly tab
-  document.getElementById('ms-mo-content').innerHTML = myPeriodHTML(myMoAg, myMoHosts, mFrom&&mTo?mFrom+' \u2013 '+mTo:'This Month');
-  // Weekly tab
-  document.getElementById('ms-we-content').innerHTML = myPeriodHTML(myWeAg.length?myWeAg:myMoAg, myWeHosts, wFrom&&wTo?wFrom+' \u2013 '+wTo:'This Week');
-  // Daily tab
-  document.getElementById('ms-da-content').innerHTML = myPeriodHTML(myMoAg, myDaHosts, dDate);
+  document.getElementById('dashSub').textContent='Data for: '+myMoAg.map(a=>a.agencyName).join(', ');
+  document.getElementById('ms-mo-content').innerHTML=myPeriodHTML(myMoAg,myMoHosts,mFrom&&mTo?mFrom+' – '+mTo:'This Month');
+  document.getElementById('ms-we-content').innerHTML=myPeriodHTML(myWeAg.length?myWeAg:myMoAg,myWeHosts,wFrom&&wTo?wFrom+' – '+wTo:'This Week');
+  document.getElementById('ms-da-content').innerHTML=myPeriodHTML(myMoAg,myDaHosts,dDate);
 }
 
-function myPeriodHTML(agencies, hosts, period){
+function myPeriodHTML(agencies,hosts,period){
   const totalRev=hosts.reduce((s,h)=>s+Number(h.rubies||0),0);
   const totalMins=hosts.reduce((s,h)=>s+Number(h.activeMins||0),0);
-  const totalDays=hosts.reduce((s,h)=>s+Number(h.activeDays||0),0);
-
   let html='<div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">'
-    +'<span style="font-family:Cinzel,serif;font-size:12px;font-weight:700;color:var(--pu-deep)">Period: '+period+'</span>'
-    +'</div>';
-
-  // Summary cards
+    +'<span style="font-family:Cinzel,serif;font-size:12px;font-weight:700;color:var(--pu-deep)">Period: '+period+'</span></div>';
   html+='<div class="sgrid" style="margin-bottom:20px">'
-    +'<div class="sc rose"><div class="sc-ico">\uD83D\uDC8E</div><div class="sc-lbl">Total Revenue</div><div class="sc-val">'+fmtN(totalRev)+'</div><div class="sc-sub">Combined rubies</div></div>'
-    +'<div class="sc teal"><div class="sc-ico">\u23F1</div><div class="sc-lbl">Total Live Hours</div><div class="sc-val">'+fmtMins(totalMins)+'</div><div class="sc-sub">All hosts combined</div></div>'
-    +'<div class="sc gold"><div class="sc-ico">\uD83C\uDFA4</div><div class="sc-lbl">Active Hosts</div><div class="sc-val">'+hosts.length+'</div><div class="sc-sub">Streaming this period</div></div>'
+    +'<div class="sc rose"><div class="sc-ico">💎</div><div class="sc-lbl">Total Revenue</div><div class="sc-val">'+fmtN(totalRev)+'</div><div class="sc-sub">Combined rubies</div></div>'
+    +'<div class="sc teal"><div class="sc-ico">⏱</div><div class="sc-lbl">Total Live Hours</div><div class="sc-val">'+fmtMins(totalMins)+'</div><div class="sc-sub">All hosts combined</div></div>'
+    +'<div class="sc gold"><div class="sc-ico">🎤</div><div class="sc-lbl">Active Hosts</div><div class="sc-val">'+hosts.length+'</div><div class="sc-sub">Streaming this period</div></div>'
     +'</div>';
-
-  if(!hosts.length){
-    html+='<div class="nodata"><big>\uD83D\uDCCA</big><p>No host data for this period</p></div>';
-    return html;
-  }
-
-  // Agency breakdown
+  if(!hosts.length){html+='<div class="nodata"><big>📊</big><p>No host data for this period</p></div>';return html;}
   if(agencies.length>0){
     html+='<div class="h-main"><span>Agency Breakdown</span></div>';
     html+='<table class="ag-table" style="margin-bottom:20px"><thead><tr><th>Agency</th><th>Code</th><th>Hosts</th><th>Revenue</th></tr></thead><tbody>';
     agencies.forEach(ag=>{
       const agHosts=hosts.filter(h=>String(h.agencyName||'').toLowerCase()===String(ag.agencyName||'').toLowerCase()||String(h.agencyCode||'')===String(ag.agencyCode||''));
       const agRev=agHosts.reduce((s,h)=>s+Number(h.rubies||0),0);
-      html+='<tr><td><div style="display:flex;align-items:center;gap:10px"><div class="ag-ico">'+initials(ag.agencyName)+'</div><span style="font-family:Cinzel,serif;font-size:12px;font-weight:600;color:var(--text-dark)">'+ag.agencyName+'</span></div></td>'
+      html+='<tr><td><div style="display:flex;align-items:center;gap:10px"><div class="ag-ico">'+initials(ag.agencyName)+'</div>'
+        +'<span style="font-family:Cinzel,serif;font-size:12px;font-weight:600;color:var(--text-dark)">'+ag.agencyName+'</span></div></td>'
         +'<td><span class="pill gold">'+ag.agencyCode+'</span></td>'
         +'<td><span class="pill purple">'+agHosts.length+' hosts</span></td>'
-        +'<td><span class="pill rose">'+fmtN(agRev)+' \uD83D\uDC8E</span></td></tr>';
+        +'<td><span class="pill rose">'+fmtN(agRev)+' 💎</span></td></tr>';
     });
     html+='</tbody></table>';
   }
-
-  // Host list
-  html+='<div class="h-main"><span>Host Roster \u2014 '+hosts.length+' Streamers</span></div>';
-  const rows=hosts.map(h=>'<tr><td><div style="display:flex;align-items:center;gap:10px"><div class="h-av">'+initials(h.hostName)+'</div><div><div class="h-name">'+h.hostName+'</div><div class="h-meta">'+(h.agencyName||'\u2014')+'</div></div></div></td>'
-    +'<td><span class="pill rose">'+fmtN(h.rubies)+' \uD83D\uDC8E</span></td>'
+  html+='<div class="h-main"><span>Host Roster — '+hosts.length+' Streamers</span></div>';
+  const rows=hosts.map(h=>'<tr><td><div style="display:flex;align-items:center;gap:10px"><div class="h-av">'+initials(h.hostName)+'</div>'
+    +'<div><div class="h-name">'+h.hostName+'</div><div class="h-meta">'+(h.agencyName||'—')+'</div></div></div></td>'
+    +'<td><span class="pill rose">'+fmtN(h.rubies)+' 💎</span></td>'
     +'<td><span class="pill teal">'+fmtMins(h.activeMins)+'</span></td>'
     +'<td><span class="pill gold">'+h.activeDays+'d</span></td></tr>').join('');
   html+='<table class="pol-table"><thead><tr><th>Host</th><th>Rubies</th><th>Hours</th><th>Days</th></tr></thead><tbody>'+rows+'</tbody></table>';
   return html;
 }
 
-/* NAV */
 function setNav(active){
   ['overview','host','agency'].forEach(n=>{const el=document.getElementById('nav-'+n);if(el)el.classList.toggle('active',n===active);});
 }
@@ -644,14 +578,13 @@ function openPanel(type){
   if(type==='agency')setTimeout(()=>document.getElementById('agencyInput').focus(),200);
 }
 
-/* FORMATTERS */
 function fmtN(n){return String(Math.round(Number(n)||0));}
 function fmtMins(m){m=Math.round(Number(m)||0);const h=Math.floor(m/60),min=m%60;if(!h&&!min)return'0h';if(!h)return min+'m';if(!min)return h+'h';return h+'h '+min+'m';}
 function initials(name){const s=String(name||'').replace(/[^\w\s]/g,'').trim(),p=s.split(/\s+/).filter(Boolean);if(p.length>=2)return(p[0][0]+(p[1][0]||'')).toUpperCase();if(s.length>=2)return s.slice(0,2).toUpperCase();return(s[0]||'?').toUpperCase();}
 
-/* HOST LOOKUP */
 function lookupHost(){
-  const q=document.getElementById('hostInput').value.trim().toLowerCase(),err=document.getElementById('hostErr'),res=document.getElementById('hostResults');
+  const q=document.getElementById('hostInput').value.trim().toLowerCase();
+  const err=document.getElementById('hostErr'),res=document.getElementById('hostResults');
   err.style.display='none';res.innerHTML='';
   if(!q){err.textContent='Please enter a Host ID or Username.';err.style.display='flex';return;}
   const mo=(D.monthly||[]).find(h=>String(h.hostName).trim().toLowerCase()===q);
@@ -659,58 +592,75 @@ function lookupHost(){
   const da=(D.daily||[]).find(h=>String(h.hostName).trim().toLowerCase()===q);
   if(!mo&&!we&&!da){err.style.display='flex';return;}
   const base=mo||we||da,meta=D.meta||{};
-  const wFrom=(meta.weeklyPeriod&&meta.weeklyPeriod.from)||'',wTo=(meta.weeklyPeriod&&meta.weeklyPeriod.to)||'';
-  const mFrom=(meta.monthlyPeriod&&meta.monthlyPeriod.from)||'',mTo=(meta.monthlyPeriod&&meta.monthlyPeriod.to)||'';
+  const wFrom=(meta.weeklyPeriod&&meta.weeklyPeriod.from)||'';
+  const wTo=(meta.weeklyPeriod&&meta.weeklyPeriod.to)||'';
+  const mFrom=(meta.monthlyPeriod&&meta.monthlyPeriod.from)||'';
+  const mTo=(meta.monthlyPeriod&&meta.monthlyPeriod.to)||'';
   const banner=document.getElementById('hostPeriodBanner');
-  if(wFrom||mFrom){let bh='<span class="pdot"></span><span>';if(wFrom&&wTo)bh+='Weekly: <strong>'+wFrom+' \u2013 '+wTo+'</strong>';if(mFrom&&mTo)bh+=(wFrom?' &nbsp;\u00B7&nbsp; ':'')+'Monthly: <strong>'+mFrom+' \u2013 '+mTo+'</strong>';bh+='</span>';banner.innerHTML=bh;banner.style.display='flex';}else{banner.style.display='none';}
-  const wPeriod=wFrom&&wTo?wFrom+' \u2013 '+wTo:'This Week',dDate=meta.dailyDate||'Today';
-  res.innerHTML='<div class="profile-row"><div class="pr-av host">'+initials(base.hostName)+'</div><div><div class="pr-name">'+base.hostName+'</div><div class="pr-meta">ID: <code>'+base.hostName+'</code> \u00B7 '+(base.agencyName||'\u2014')+'</div></div><span class="pr-badge active">\u25CF Active</span></div>'
-    +'<div class="tabs"><button class="tab active" onclick="switchTab(this,'ht-mo')">\uD83D\uDCC5 Monthly</button><button class="tab" onclick="switchTab(this,'ht-we')">\uD83D\uDCCA Weekly</button><button class="tab" onclick="switchTab(this,'ht-da')">\uD83D\uDCC6 Daily</button></div>'
-    +'<div id="ht-mo" class="tab-body open">'+(mo?hostStatBlock('mo','\uD83D\uDCC5','Monthly Performance',mFrom&&mTo?mFrom+' \u2013 '+mTo:'This Month',mo):'<div class="nodata"><big>\uD83D\uDCC5</big><p>No monthly data found</p></div>')+'</div>'
-    +'<div id="ht-we" class="tab-body">'+(we?hostStatBlock('we','\uD83D\uDCCA','Weekly Performance',wPeriod,we):'<div class="nodata"><big>\uD83D\uDCCA</big><p>No weekly data found</p></div>')+'</div>'
-    +'<div id="ht-da" class="tab-body">'+(da?hostStatBlock('da','\uD83D\uDCC6','Daily Performance',dDate,da):'<div class="nodata"><big>\uD83D\uDCC6</big><p>No daily data found</p></div>')+'</div>';
-}
-function hostStatBlock(key,ico,title,period,h){
-  return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:16px"><span style="font-size:16px">'+ico+'</span><span style="font-family:Cinzel,serif;font-size:12px;font-weight:700;color:var(--pu-deep)">'+title+'</span><span style="margin-left:auto;font-size:11px;color:var(--text-dim)">'+period+'</span></div>'
-    +'<div class="sgrid"><div class="sc rose"><div class="sc-ico">\uD83D\uDC8E</div><div class="sc-lbl">Total Rubies</div><div class="sc-val">'+fmtN(h.rubies)+'</div><div class="sc-sub">Coins received</div></div>'
-    +'<div class="sc teal"><div class="sc-ico">\u23F1</div><div class="sc-lbl">Live Hours</div><div class="sc-val">'+fmtMins(h.activeMins)+'</div><div class="sc-sub">Streaming time</div></div>'
-    +'<div class="sc gold"><div class="sc-ico">\u2705</div><div class="sc-lbl">Valid Days</div><div class="sc-val">'+h.activeDays+'d</div><div class="sc-sub">Active days</div></div></div>';
+  if(wFrom||mFrom){
+    let bh='<span class="pdot"></span><span>';
+    if(wFrom&&wTo)bh+='Weekly: <strong>'+wFrom+' – '+wTo+'</strong>';
+    if(mFrom&&mTo)bh+=(wFrom?' &nbsp;·&nbsp; ':'')+'Monthly: <strong>'+mFrom+' – '+mTo+'</strong>';
+    bh+='</span>';banner.innerHTML=bh;banner.style.display='flex';
+  }else{banner.style.display='none';}
+  const wPeriod=wFrom&&wTo?wFrom+' – '+wTo:'This Week';
+  const dDate=meta.dailyDate||'Today';
+  res.innerHTML='<div class="profile-row"><div class="pr-av host">'+initials(base.hostName)+'</div><div><div class="pr-name">'+base.hostName+'</div><div class="pr-meta">ID: <code>'+base.hostName+'</code> · '+(base.agencyName||'—')+'</div></div><span class="pr-badge active">● Active</span></div>'
+    +'<div class="tabs"><button class="tab active" onclick="switchTab(this,'ht-mo')">📅 Monthly</button><button class="tab" onclick="switchTab(this,'ht-we')">📊 Weekly</button><button class="tab" onclick="switchTab(this,'ht-da')">📆 Daily</button></div>'
+    +'<div id="ht-mo" class="tab-body open">'+(mo?hostStatBlock('mo','📅','Monthly Performance',mFrom&&mTo?mFrom+' – '+mTo:'This Month',mo):'<div class="nodata"><big>📅</big><p>No monthly data found</p></div>')+'</div>'
+    +'<div id="ht-we" class="tab-body">'+(we?hostStatBlock('we','📊','Weekly Performance',wPeriod,we):'<div class="nodata"><big>📊</big><p>No weekly data found</p></div>')+'</div>'
+    +'<div id="ht-da" class="tab-body">'+(da?hostStatBlock('da','📆','Daily Performance',dDate,da):'<div class="nodata"><big>📆</big><p>No daily data found</p></div>')+'</div>';
 }
 
-/* AGENCY LOOKUP */
+function hostStatBlock(key,ico,title,period,h){
+  return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:16px"><span style="font-size:16px">'+ico+'</span>'
+    +'<span style="font-family:Cinzel,serif;font-size:12px;font-weight:700;color:var(--pu-deep)">'+title+'</span>'
+    +'<span style="margin-left:auto;font-size:11px;color:var(--text-dim)">'+period+'</span></div>'
+    +'<div class="sgrid"><div class="sc rose"><div class="sc-ico">💎</div><div class="sc-lbl">Total Rubies</div><div class="sc-val">'+fmtN(h.rubies)+'</div><div class="sc-sub">Coins received</div></div>'
+    +'<div class="sc teal"><div class="sc-ico">⏱</div><div class="sc-lbl">Live Hours</div><div class="sc-val">'+fmtMins(h.activeMins)+'</div><div class="sc-sub">Streaming time</div></div>'
+    +'<div class="sc gold"><div class="sc-ico">✅</div><div class="sc-lbl">Valid Days</div><div class="sc-val">'+h.activeDays+'d</div><div class="sc-sub">Active days</div></div></div>';
+}
+
 function lookupAgency(){
-  const code=document.getElementById('agencyInput').value.trim(),err=document.getElementById('agencyErr'),res=document.getElementById('agencyResults');
+  const code=document.getElementById('agencyInput').value.trim();
+  const err=document.getElementById('agencyErr'),res=document.getElementById('agencyResults');
   err.style.display='none';res.innerHTML='';
   if(!code){err.textContent='Please enter an Agency Code.';err.style.display='flex';return;}
   const agencies=D.agencies||{};
-  const moAg=(agencies.monthly||[]).find(a=>a.agencyCode===code),weAg=(agencies.weekly||[]).find(a=>a.agencyCode===code);
+  const moAg=(agencies.monthly||[]).find(a=>a.agencyCode===code);
+  const weAg=(agencies.weekly||[]).find(a=>a.agencyCode===code);
   if(!moAg&&!weAg){err.style.display='flex';document.getElementById('agencyHostSection').style.display='none';return;}
   const base=moAg||weAg,meta=D.meta||{};
   const mFrom=(meta.monthlyPeriod&&meta.monthlyPeriod.from)||'',mTo=(meta.monthlyPeriod&&meta.monthlyPeriod.to)||'';
   const wFrom=(meta.weeklyPeriod&&meta.weeklyPeriod.from)||'',wTo=(meta.weeklyPeriod&&meta.weeklyPeriod.to)||'';
-  const mPeriod=mFrom&&mTo?mFrom+' \u2013 '+mTo:'This Month',wPeriod=wFrom&&wTo?wFrom+' \u2013 '+wTo:'This Week';
+  const mPeriod=mFrom&&mTo?mFrom+' – '+mTo:'This Month';
+  const wPeriod=wFrom&&wTo?wFrom+' – '+wTo:'This Week';
   const moHosts=moAg?(moAg.hostIds||[]).map(id=>(D.monthly||[]).find(h=>h.hostId===id)).filter(Boolean):[];
   const weHosts=weAg?(weAg.hostIds||[]).map(id=>(D.weekly||[]).find(h=>h.hostId===id)).filter(Boolean):[];
-  const moRev=moHosts.reduce((s,h)=>s+Number(h.rubies||0),0),weRev=weHosts.reduce((s,h)=>s+Number(h.rubies||0),0);
+  const moRev=moHosts.reduce((s,h)=>s+Number(h.rubies||0),0);
+  const weRev=weHosts.reduce((s,h)=>s+Number(h.rubies||0),0);
   res.innerHTML='<div class="profile-row"><div class="pr-av agency">'+initials(base.agencyName)+'</div><div><div class="pr-name">'+base.agencyName+'</div><div class="pr-meta">Code: <code>'+base.agencyCode+'</code></div></div><span class="pr-badge agency-b">Agency</span></div>'
-    +'<div class="tabs"><button class="tab active" onclick="switchTab(this,'at-mo')">\uD83D\uDCC5 Monthly</button><button class="tab" onclick="switchTab(this,'at-we')">\uD83D\uDCCA Weekly</button></div>'
-    +'<div id="at-mo" class="tab-body open"><div style="display:flex;align-items:center;gap:8px;margin-bottom:16px"><span style="font-family:Cinzel,serif;font-size:12px;font-weight:700;color:var(--pu-deep)">\uD83D\uDCC5 Monthly Revenue</span><span style="margin-left:auto;font-size:11px;color:var(--text-dim)">'+mPeriod+'</span></div>'
-    +'<div class="sgrid2" style="margin-bottom:22px"><div class="sc gold"><div class="sc-ico">\uD83D\uDCB0</div><div class="sc-lbl">Total Revenue</div><div class="sc-val">'+fmtN(moRev)+' \uD83D\uDC8E</div><div class="sc-sub">Combined rubies</div></div><div class="sc purple"><div class="sc-ico">\uD83D\uDC65</div><div class="sc-lbl">Active Hosts</div><div class="sc-val">'+moHosts.length+'</div><div class="sc-sub">Monthly roster</div></div></div>'
-    +'<div class="h-main"><span>Host Roster \u2014 '+moHosts.length+' Streamers</span></div>'+(moHosts.length?hostTableHTML(moHosts):'<div class="nodata"><big>\uD83C\uDFA4</big><p>No monthly hosts found</p></div>')+'</div>'
-    +'<div id="at-we" class="tab-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:16px"><span style="font-family:Cinzel,serif;font-size:12px;font-weight:700;color:var(--pu-deep)">\uD83D\uDCCA Weekly Revenue</span><span style="margin-left:auto;font-size:11px;color:var(--text-dim)">'+wPeriod+'</span></div>'
-    +'<div class="sgrid2" style="margin-bottom:22px"><div class="sc gold"><div class="sc-ico">\uD83D\uDCB0</div><div class="sc-lbl">Total Revenue</div><div class="sc-val">'+fmtN(weRev)+' \uD83D\uDC8E</div><div class="sc-sub">Combined rubies</div></div><div class="sc purple"><div class="sc-ico">\uD83D\uDC65</div><div class="sc-lbl">Active Hosts</div><div class="sc-val">'+weHosts.length+'</div><div class="sc-sub">Weekly roster</div></div></div>'
-    +'<div class="h-main"><span>Host Roster \u2014 '+weHosts.length+' Streamers</span></div>'+(weHosts.length?hostTableHTML(weHosts):'<div class="nodata"><big>\uD83C\uDFA4</big><p>No weekly hosts found</p></div>')+'</div>';
+    +'<div class="tabs"><button class="tab active" onclick="switchTab(this,'at-mo')">📅 Monthly</button><button class="tab" onclick="switchTab(this,'at-we')">📊 Weekly</button></div>'
+    +'<div id="at-mo" class="tab-body open"><div style="display:flex;align-items:center;gap:8px;margin-bottom:16px"><span style="font-family:Cinzel,serif;font-size:12px;font-weight:700;color:var(--pu-deep)">📅 Monthly Revenue</span><span style="margin-left:auto;font-size:11px;color:var(--text-dim)">'+mPeriod+'</span></div>'
+    +'<div class="sgrid2" style="margin-bottom:22px"><div class="sc gold"><div class="sc-ico">💰</div><div class="sc-lbl">Total Revenue</div><div class="sc-val">'+fmtN(moRev)+' 💎</div><div class="sc-sub">Combined rubies</div></div><div class="sc purple"><div class="sc-ico">👥</div><div class="sc-lbl">Active Hosts</div><div class="sc-val">'+moHosts.length+'</div><div class="sc-sub">Monthly roster</div></div></div>'
+    +'<div class="h-main"><span>Host Roster — '+moHosts.length+' Streamers</span></div>'+(moHosts.length?hostTableHTML(moHosts):'<div class="nodata"><big>🎤</big><p>No monthly hosts found</p></div>')+'</div>'
+    +'<div id="at-we" class="tab-body"><div style="display:flex;align-items:center;gap:8px;margin-bottom:16px"><span style="font-family:Cinzel,serif;font-size:12px;font-weight:700;color:var(--pu-deep)">📊 Weekly Revenue</span><span style="margin-left:auto;font-size:11px;color:var(--text-dim)">'+wPeriod+'</span></div>'
+    +'<div class="sgrid2" style="margin-bottom:22px"><div class="sc gold"><div class="sc-ico">💰</div><div class="sc-lbl">Total Revenue</div><div class="sc-val">'+fmtN(weRev)+' 💎</div><div class="sc-sub">Combined rubies</div></div><div class="sc purple"><div class="sc-ico">👥</div><div class="sc-lbl">Active Hosts</div><div class="sc-val">'+weHosts.length+'</div><div class="sc-sub">Weekly roster</div></div></div>'
+    +'<div class="h-main"><span>Host Roster — '+weHosts.length+' Streamers</span></div>'+(weHosts.length?hostTableHTML(weHosts):'<div class="nodata"><big>🎤</big><p>No weekly hosts found</p></div>')+'</div>';
   document.getElementById('agencyHostSection').style.display='';
   document.getElementById('agencyHostResults').innerHTML='';
   document.getElementById('agencyHostErr').style.display='none';
   document.getElementById('agencyHostInput').value='';
 }
+
 function hostTableHTML(hosts){
-  const rows=hosts.map(h=>'<tr><td><div style="display:flex;align-items:center;gap:10px"><div class="h-av">'+initials(h.hostName)+'</div><div><div class="h-name">'+h.hostName+'</div><div class="h-meta">'+(h.agencyName||'\u2014')+'</div></div></div></td><td><span class="pill rose">'+fmtN(h.rubies)+' \uD83D\uDC8E</span></td><td><span class="pill teal">'+fmtMins(h.activeMins)+'</span></td><td><span class="pill gold">'+h.activeDays+'d</span></td></tr>').join('');
+  const rows=hosts.map(h=>'<tr><td><div style="display:flex;align-items:center;gap:10px"><div class="h-av">'+initials(h.hostName)+'</div><div><div class="h-name">'+h.hostName+'</div><div class="h-meta">'+(h.agencyName||'—')+'</div></div></div></td><td><span class="pill rose">'+fmtN(h.rubies)+' 💎</span></td><td><span class="pill teal">'+fmtMins(h.activeMins)+'</span></td><td><span class="pill gold">'+h.activeDays+'d</span></td></tr>').join('');
   return '<table class="pol-table"><thead><tr><th>Host</th><th>Rubies</th><th>Hours</th><th>Days</th></tr></thead><tbody>'+rows+'</tbody></table>';
 }
+
 function lookupAgencyHost(){
-  const q=document.getElementById('agencyHostInput').value.trim().toLowerCase(),err=document.getElementById('agencyHostErr'),res=document.getElementById('agencyHostResults');
+  const q=document.getElementById('agencyHostInput').value.trim().toLowerCase();
+  const err=document.getElementById('agencyHostErr'),res=document.getElementById('agencyHostResults');
   err.style.display='none';res.innerHTML='';
   if(!q){err.textContent='Please enter a Host ID or Username.';err.style.display='flex';return;}
   const mo=(D.monthly||[]).find(h=>String(h.hostName).trim().toLowerCase()===q);
@@ -720,14 +670,16 @@ function lookupAgencyHost(){
   const base=mo||we||da,meta=D.meta||{};
   const wFrom=(meta.weeklyPeriod&&meta.weeklyPeriod.from)||'',wTo=(meta.weeklyPeriod&&meta.weeklyPeriod.to)||'';
   const mFrom=(meta.monthlyPeriod&&meta.monthlyPeriod.from)||'',mTo=(meta.monthlyPeriod&&meta.monthlyPeriod.to)||'';
-  const wPeriod=wFrom&&wTo?wFrom+' \u2013 '+wTo:'This Week',dDate=meta.dailyDate||'Today';
-  res.innerHTML='<div class="profile-row"><div class="pr-av host">'+initials(base.hostName)+'</div><div><div class="pr-name">'+base.hostName+'</div><div class="pr-meta">ID: <code>'+base.hostName+'</code> \u00B7 '+(base.agencyName||'\u2014')+'</div></div><span class="pr-badge active">\u25CF Active</span></div>'
-    +'<div class="tabs"><button class="tab active" onclick="switchTab(this,'ah-mo')">\uD83D\uDCC5 Monthly</button><button class="tab" onclick="switchTab(this,'ah-we')">\uD83D\uDCCA Weekly</button><button class="tab" onclick="switchTab(this,'ah-da')">\uD83D\uDCC6 Daily</button></div>'
-    +'<div id="ah-mo" class="tab-body open">'+(mo?hostStatBlock('mo','\uD83D\uDCC5','Monthly Performance',mFrom&&mTo?mFrom+' \u2013 '+mTo:'This Month',mo):'<div class="nodata"><big>\uD83D\uDCC5</big><p>No monthly data</p></div>')+'</div>'
-    +'<div id="ah-we" class="tab-body">'+(we?hostStatBlock('we','\uD83D\uDCCA','Weekly Performance',wPeriod,we):'<div class="nodata"><big>\uD83D\uDCCA</big><p>No weekly data</p></div>')+'</div>'
-    +'<div id="ah-da" class="tab-body">'+(da?hostStatBlock('da','\uD83D\uDCC6','Daily Performance',dDate,da):'<div class="nodata"><big>\uD83D\uDCC6</big><p>No daily data</p></div>')+'</div>';
+  const wPeriod=wFrom&&wTo?wFrom+' – '+wTo:'This Week';
+  const dDate=meta.dailyDate||'Today';
+  res.innerHTML='<div class="profile-row"><div class="pr-av host">'+initials(base.hostName)+'</div><div><div class="pr-name">'+base.hostName+'</div><div class="pr-meta">ID: <code>'+base.hostName+'</code> · '+(base.agencyName||'—')+'</div></div><span class="pr-badge active">● Active</span></div>'
+    +'<div class="tabs"><button class="tab active" onclick="switchTab(this,'ah-mo')">📅 Monthly</button><button class="tab" onclick="switchTab(this,'ah-we')">📊 Weekly</button><button class="tab" onclick="switchTab(this,'ah-da')">📆 Daily</button></div>'
+    +'<div id="ah-mo" class="tab-body open">'+(mo?hostStatBlock('mo','📅','Monthly Performance',mFrom&&mTo?mFrom+' – '+mTo:'This Month',mo):'<div class="nodata"><big>📅</big><p>No monthly data</p></div>')+'</div>'
+    +'<div id="ah-we" class="tab-body">'+(we?hostStatBlock('we','📊','Weekly Performance',wPeriod,we):'<div class="nodata"><big>📊</big><p>No weekly data</p></div>')+'</div>'
+    +'<div id="ah-da" class="tab-body">'+(da?hostStatBlock('da','📆','Daily Performance',dDate,da):'<div class="nodata"><big>📆</big><p>No daily data</p></div>')+'</div>';
   res.scrollIntoView({behavior:'smooth',block:'start'});
 }
+
 function switchTab(btn,targetId){
   btn.closest('.tabs').querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   btn.classList.add('active');
@@ -740,6 +692,7 @@ function switchMyTab(btn,targetId){
   ['ms-mo','ms-we','ms-da'].forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('open');});
   const t=document.getElementById(targetId);if(t)t.classList.add('open');
 }
+
 document.getElementById('loginPage').classList.remove('hidden');
 </script>
 </body>
